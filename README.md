@@ -1,66 +1,105 @@
-
 # EX-01-Datatypes-Operators
 ## AIM:
-Write a C program to read 3 characters one by one and print the characters in a reverse order.
+To write a program that reads three numbers and finds their sum.
 
 ## ALGORITHM:
-1.	Declare three character variables to store the input characters.
-2.	Use the scanf function to read the characters one by one from the user.
-3.	Print the characters in reverse order using the printf function.
-4.	End the program.
-
+```
+1.Start the program.
+2.Declare three integer variables: a, b, and c.
+3.Prompt the user to input three numbers.
+4.Read the three numbers using scanf().
+5.Add the three numbers and store the result in a variable sum.
+6.Display the sum using printf().
+7.End the program.
+```
 ## PROGRAM:
-
+```.py
+#include <stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    int sum=a+b+c;
+    printf("Sum is:%d",sum);
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/ef88874b-610e-4b6a-8ea6-fc5236dc4231)
 
 
 ## RESULT:
-Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
+The program successfully reads three numbers from the user, calculates their sum, and displays the result.
 
 
 # EX-02- Conditional-Statements
 ## AIM:
-Write a C program to read A values and check whether A is positive number or not.
+To write a C program that reads any day number (1 to 7) and displays the corresponding day name.
+If the input is not between 1 and 7, display "Invalid number.
 
 # ALGORITHM:
-1.	Declare a variable to store the input value A.
-2.	Use the scanf function to read the value of A from the user.
-3.	Check if the value of A is greater than zero.
-4.	If A is greater than zero, print a message indicating that it's a positive number. 
-5.	Otherwise, print a message indicating that it's not a positive number.
-6.End the program.
+1.Start the program.
+2.Declare an integer variable day.
+3.Ask the user to enter a day number (1–7).
+4.Read the input using scanf().
+5.Use a switch statement:
+
+If day == 1, print "Sunday".
+
+If day == 2, print "Monday".
+
+If day == 3, print "Tuesday".
+
+If day == 4, print "Wednesday".
+
+If day == 5, print "Thursday".
+
+If day == 6, print "Friday".
+
+If day == 7, print "Saturday".
+
+7.Else, print "Invalid number."
+
+8.End the program.
 
 # PROGRAM:
-
+```.py
+#include <stdio.h>
+int main()  
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if(a==1){
+        printf("Monday");
+    }
+    else if(a==2){
+        printf("Tuesday");
+        
+    }
+    else if(a==3){
+        printf("Wednesday");        
+    }
+    else if(a==4){
+        printf("Thusday");
+    }
+    else if(a==5){
+        printf("Friday");
+    }
+    else if(a==6){
+        printf("Saturday");
+        
+    }
+    else{
+        printf("invalid number.");
+    }
+    return 0;
+}
+```
 # OUTPUT:
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/3f8046f7-180e-4a97-8083-f99fcd5e6265)
 
 
 # RESULT:
-Thus the program to read A values and check whether A is positive number or not has been executed successfully.
+The program correctly reads a day number, displays the appropriate day name if it is between 1 and 7, and shows "Invalid number." if it is outside this range.
  
  
  
@@ -68,68 +107,98 @@ Thus the program to read A values and check whether A is positive number or not 
 
 # EX-03- Operators-Expressions
 ## AIM:
-Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
+To write a C program to calculate the total, average, and percentage of marks obtained in three subjects for engineering admission.
 
 ## ALGORITHM:
-1.	Declare variables to store the two fraction numbers and the result.
-2.	Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
-3.	Use the scanf function to read the numerator and denominator of the first fraction.
-4.	Repeat steps 2 and 3 to get the second fraction from the user.
-5.	Calculate the decimal values of both fractions by dividing the numerators by the denominators.
-6.	Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
-7.	Print the minimum value.
+1.Start the program.
+2.Declare three float variables to store marks: m1, m2, m3.
+3.Declare float variables for total, average, and percentage.
+4.Prompt the user to enter marks of three subjects.
+5.Read the marks using scanf().
+6.Calculate:
+total = m1 + m2 + m3
+average = total / 3
+percentage = (total / 300) * 100
+7.Display the total, average, and percentage using printf().
+8.End the program.
 
 ## PROGRAM:
-
+```.py
+#include <stdio.h>
+int main()
+{
+   float a,b,c,total,avg,per;
+   scanf("%f %f %f",&a,&b,&c);
+   total=a+b+c;
+   avg=(a+b+c)/3;
+   per=avg;
+   printf("Total marks = %.2f",total);
+   printf("\nAverage marks = %.2f",avg);
+   printf("\nPercentage = %.2f",per);
+   return 0;
+     
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/3c731311-aeae-4649-acbd-92e746ad137a)
 
 
 ## RESULT:
-Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
-
-
-
+The program correctly reads three subject marks from the user, calculates the total, average, and percentage, and displays the results with two decimal places
 
 # EX-04- Using Conditional Statements
 
 ## AIM:
-Write a C program to check whether the input value is equal to 1 using simple if statement
+To write a C program that reads a number and prints whether the number is positive, negative, or equal to 0 using an else-if conditional statement.
 
 ## ALGORITHM:
-1.	Declare a variable to store the input value.
-2.	Use the scanf function to read the input value from the user.
-3.	Use an if statement to check if the input value is equal to 1.
-4.	If the condition in the if statement is true, print a message indicating that the input value is equal to 1.
-5.	Otherwise, print a message indicating that it's not equal to 1.
-6.	End the program.
+1.Start the program.
+2.Declare an integer variable num to store the user input.
+3.Prompt the user to input a number.
+4.Use scanf() to read the number entered by the user.
+5.Use an else-if conditional statement to check:
+If num > 0, print "number is positive".
+If num == 0, print "number is equal to 0".
+If num < 0, print "number is negative".
+6End the program.
 
 ## PROGRAM:
+```.py
+#include <stdio.h>
+int main()  
+{
+    int a;
+    scanf("%d",&a);
+    if(a>0)
+    {
+        printf("number is positive");
+    }
+    else if(a<0)
+    {
+        printf("number is negative");
+    }
+    else
+    {
+        printf("number is 0");
+    }
+    return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/65a3bb6b-a212-4157-9293-9af119224389)
 
 
 
-
-
-
-
-
-
-	
 
 ## RESULT:
-Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
+The program successfully evaluates the input number and prints whether it is positive, negative, or equal to 0.
 
 
 
-# EX-05- Calculating Total, Percentage, And Division Using Conditional Statements 
+
+
+# EX-05- To Check a number is positive or negative
 ## AIM:
 To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
 ## ALGORITHM:
@@ -147,9 +216,32 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```.py
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 9:
+            printf("9 is positive.");
+            break;
+        case 4:
+            printf("4 is positive.");
+            break;
+        case -7:
+            printf("-7 is negative.");
+            break;
+    }
+    return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/87878c81-ab30-4af4-88af-e6b8a2e95d99)
+
 
 ## RESULT:
-The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
+The program successfully evaluates the input number and prints whether it is positive, negative, or equal to 0.
 
